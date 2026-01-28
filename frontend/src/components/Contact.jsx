@@ -7,6 +7,7 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    company: "",
     budget: "",
     message: "",
   });
@@ -44,6 +45,7 @@ export default function Contact() {
       setFormData({
         name: "",
         email: "",
+        company: "",
         budget: "",
         message: "",
       });
@@ -86,6 +88,19 @@ export default function Contact() {
               value={formData.email}
               onChange={handleChange}
               placeholder="your@email.com"
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="company">Company (Optional)</label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              value={formData.company}
+              onChange={handleChange}
+              placeholder="Your company name"
             />
           </div>
 
@@ -98,11 +113,10 @@ export default function Contact() {
               onChange={handleChange}
             >
               <option value="">Select your budget range</option>
-              <option value="$1k - $5k">$1k - $5k</option>
-              <option value="$5k - $10k">$5k - $10k</option>
-              <option value="$10k - $25k">$10k - $25k</option>
-              <option value="$25k - $50k">$25k - $50k</option>
-              <option value="$50k+">$50k+</option>
+              <option value="5k-10k">$5k - $10k</option>
+              <option value="10k-25k">$10k - $25k</option>
+              <option value="25k-50k">$25k - $50k</option>
+              <option value="50k+">$50k+</option>
             </select>
           </div>
 
@@ -114,6 +128,7 @@ export default function Contact() {
               value={formData.message}
               onChange={handleChange}
               placeholder="Tell me about your project..."
+              required
             />
           </div>
 
@@ -126,12 +141,16 @@ export default function Contact() {
             {loading ? "Sending..." : "Send Message"}
           </button>
           {success && (
-            <div style={{ color: "green", marginTop: "10px", textAlign: "center" }}>
+            <div
+              style={{ color: "green", marginTop: "10px", textAlign: "center" }}
+            >
               ✓ Message sent successfully!
             </div>
           )}
           {error && (
-            <div style={{ color: "red", marginTop: "10px", textAlign: "center" }}>
+            <div
+              style={{ color: "red", marginTop: "10px", textAlign: "center" }}
+            >
               ✗ {error}
             </div>
           )}
