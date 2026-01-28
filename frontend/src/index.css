@@ -914,11 +914,9 @@ section {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(
-    135deg,
-    var(--primary-color),
-    var(--secondary-color)
-  );
+  background: linear-gradient(-45deg, #d946ef, #a855f7, #ec4899, #d946ef);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
   padding: 1rem;
 }
 
