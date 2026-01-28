@@ -205,7 +205,12 @@ export default function AdminDashboard() {
               className={`nav-item ${activeSection === "overview" ? "active" : ""}`}
               onClick={() => {
                 setActiveSection("overview");
-                window.scrollTo({ top: 0, behavior: "smooth" });
+                setTimeout(() => {
+                  const mainContent = document.querySelector(".main-content");
+                  if (mainContent) {
+                    mainContent.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }
+                }, 0);
               }}
               style={{ cursor: "pointer" }}
             >
@@ -216,7 +221,12 @@ export default function AdminDashboard() {
               className={`nav-item ${activeSection === "messages" ? "active" : ""}`}
               onClick={() => {
                 setActiveSection("messages");
-                window.scrollTo({ top: 0, behavior: "smooth" });
+                setTimeout(() => {
+                  const mainContent = document.querySelector(".main-content");
+                  if (mainContent) {
+                    mainContent.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }
+                }, 0);
               }}
               style={{ cursor: "pointer" }}
             >
@@ -228,7 +238,12 @@ export default function AdminDashboard() {
               className={`nav-item ${activeSection === "settings" ? "active" : ""}`}
               onClick={() => {
                 setActiveSection("settings");
-                window.scrollTo({ top: 0, behavior: "smooth" });
+                setTimeout(() => {
+                  const mainContent = document.querySelector(".main-content");
+                  if (mainContent) {
+                    mainContent.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }
+                }, 0);
               }}
               style={{ cursor: "pointer" }}
             >
