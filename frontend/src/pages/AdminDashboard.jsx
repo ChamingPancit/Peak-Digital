@@ -105,6 +105,41 @@ export default function AdminDashboard() {
     setSelectedMessage(null);
   };
 
+  const markAsRead = async (messageId, message) => {
+    try {
+      const response = await fetch(
+        `${API_BASE_URL}/admin/messages/${messageId}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${authToken}`,
+          },
+          body: JSON.stringify({ status: "read" }),
+        },
+      );
+
+      if (response.ok) {
+        // Update local message and selected message
+        const updatedMessage = { ...message, status: "read" };
+        setSelectedMessage(updatedMessage);
+
+        // Update messages list
+        setMessages(
+          messages.map((m) => (m.id === messageId ? updatedMessage : m)),
+        );
+
+        // Update stats
+        setStats({
+          ...stats,
+          unread: Math.max(0, stats.unread - 1),
+        });
+      }
+    } catch (error) {
+      console.error("Error marking message as read:", error);
+    }
+  };
+
   if (!authToken) {
     return (
       <div className="login-container">
@@ -231,7 +266,7 @@ export default function AdminDashboard() {
                           y1="20"
                           x2="30"
                           y2="220"
-                          stroke="#ddd"
+                          stroke="#a1a1aa"
                           strokeWidth="2"
                         />
                         {/* X-axis */}
@@ -240,7 +275,7 @@ export default function AdminDashboard() {
                           y1="220"
                           x2="280"
                           y2="220"
-                          stroke="#ddd"
+                          stroke="#a1a1aa"
                           strokeWidth="2"
                         />
 
@@ -253,7 +288,13 @@ export default function AdminDashboard() {
                           height={(stats.unread / stats.total) * 180}
                           fill="#3b82f6"
                         />
-                        <text x="50" y="235" textAnchor="middle" fontSize="12">
+                        <text
+                          x="50"
+                          y="235"
+                          textAnchor="middle"
+                          fontSize="12"
+                          fill="#f5f5f5"
+                        >
                           Unread
                         </text>
                         <text
@@ -284,7 +325,13 @@ export default function AdminDashboard() {
                           }
                           fill="#6b7280"
                         />
-                        <text x="130" y="235" textAnchor="middle" fontSize="12">
+                        <text
+                          x="130"
+                          y="235"
+                          textAnchor="middle"
+                          fontSize="12"
+                          fill="#f5f5f5"
+                        >
                           Read
                         </text>
                         <text
@@ -312,7 +359,13 @@ export default function AdminDashboard() {
                           height={(stats.replied / stats.total) * 180}
                           fill="#10b981"
                         />
-                        <text x="190" y="235" textAnchor="middle" fontSize="12">
+                        <text
+                          x="190"
+                          y="235"
+                          textAnchor="middle"
+                          fontSize="12"
+                          fill="#f5f5f5"
+                        >
                           Replied
                         </text>
                         <text
@@ -332,7 +385,7 @@ export default function AdminDashboard() {
                         y="50%"
                         textAnchor="middle"
                         dy="0.3em"
-                        fill="#999"
+                        fill="#a1a1aa"
                       >
                         No data yet
                       </text>
@@ -385,7 +438,12 @@ export default function AdminDashboard() {
                     <div
                       key={msg.id}
                       className={`message-item ${msg.status === "unread" ? "unread" : ""}`}
-                      onClick={() => setSelectedMessage(msg)}
+                      onClick={() => {
+                        setSelectedMessage(msg);
+                        if (msg.status === "unread") {
+                          markAsRead(msg.id, msg);
+                        }
+                      }}
                       style={{ cursor: "pointer" }}
                     >
                       <div className="message-info">
@@ -453,17 +511,7 @@ export default function AdminDashboard() {
 
           <section
             className={`section ${activeSection === "settings" ? "active" : ""}`}
-          >
-            <div className="settings-card">
-              <h3>Account Information</h3>
-              <p>
-                Email: <span>admin@example.com</span>
-              </p>
-              <p>
-                Last Login: <span>N/A</span>
-              </p>
-            </div>
-          </section>
+          ></section>
         </main>
       </div>
     </div>

@@ -998,12 +998,13 @@ section {
 }
 
 .dashboard-navbar {
-  background: white;
+  background: rgba(15, 10, 26, 0.95);
   border-bottom: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 10px rgba(217, 70, 239, 0.2);
   position: sticky;
   top: 0;
   z-index: 100;
+  backdrop-filter: blur(10px);
 }
 
 .navbar-container {
@@ -1019,7 +1020,10 @@ section {
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--text-primary);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin: 0;
 }
 
@@ -1046,7 +1050,8 @@ section {
 
 .sidebar {
   width: 260px;
-  background: white;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   box-shadow: var(--shadow-sm);
   padding: 1.5rem 0;
@@ -1074,12 +1079,12 @@ section {
 }
 
 .nav-item:hover {
-  background: var(--bg-secondary);
+  background: rgba(217, 70, 239, 0.1);
   color: var(--primary-color);
 }
 
 .nav-item.active {
-  background: var(--bg-secondary);
+  background: rgba(217, 70, 239, 0.15);
   color: var(--primary-color);
   border-left-color: var(--primary-color);
 }
@@ -1195,7 +1200,7 @@ section {
 }
 
 .message-item.unread {
-  background: #fef3c7;
+  background: rgba(217, 70, 239, 0.1);
   font-weight: 600;
 }
 
@@ -1231,28 +1236,28 @@ section {
 }
 
 .message-status.unread {
-  background: #dbeafe;
-  color: #1e40af;
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
 }
 
 .message-status.read {
-  background: #d1d5db;
-  color: #374151;
+  background: rgba(107, 114, 128, 0.2);
+  color: #d4d4d8;
 }
 
 .message-status.replied {
-  background: #d1fae5;
-  color: #065f46;
+  background: rgba(16, 185, 129, 0.2);
+  color: #6ee7b7;
 }
 
 .message-status.archived {
-  background: #f3e8ff;
-  color: #6b21a8;
+  background: rgba(168, 85, 247, 0.2);
+  color: #d8b4fe;
 }
 
 /* Message Detail */
 .message-detail {
-  background: white;
+  background: var(--bg-secondary);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: var(--shadow-sm);

@@ -5,18 +5,21 @@ A full-stack developer portfolio built with React + Vite (frontend) and Node.js 
 ## Tech Stack
 
 **Frontend:**
+
 - React 18.3.1
 - Vite 5.4.21
 - React Router v6.22.0
 - CSS3 (Flexbox, Grid, Animations)
 
 **Backend:**
+
 - Node.js + Express
 - PostgreSQL
 - JWT Authentication
 - Bcrypt Password Hashing
 
 **Design:**
+
 - Dark Purple Theme (#0f0a1a)
 - Magenta Accents (#d946ef)
 - Fully Responsive (Mobile, Tablet, Desktop)
@@ -47,18 +50,21 @@ A full-stack developer portfolio built with React + Vite (frontend) and Node.js 
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js 16+
 - PostgreSQL 12+
 
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone <your-repo-url>
    cd Batsup2026
    ```
 
 2. **Setup Backend**
+
    ```bash
    cd backend
    npm install
@@ -80,6 +86,7 @@ The frontend runs on `http://localhost:3000` and backend on `http://localhost:50
 ## Features
 
 ### Public Site
+
 - Hero section with animated gradient
 - About section
 - Services showcase
@@ -88,6 +95,7 @@ The frontend runs on `http://localhost:3000` and backend on `http://localhost:50
 - Fully responsive design
 
 ### Admin Dashboard
+
 - Secure login with JWT authentication
 - Message management (view, filter, delete)
 - Message statistics
@@ -95,6 +103,7 @@ The frontend runs on `http://localhost:3000` and backend on `http://localhost:50
 - Real-time message count
 
 ## Admin Credentials (Development)
+
 - **Email:** admin@example.com
 - **Password:** secure_admin_password
 
@@ -105,12 +114,14 @@ The frontend runs on `http://localhost:3000` and backend on `http://localhost:50
 The application uses PostgreSQL. Migrations are run automatically on startup.
 
 **Tables:**
+
 - `contact_messages` - Contact form submissions
 - `admin_users` - Admin user accounts
 
 ## Environment Variables
 
 See `.env.example` for required variables:
+
 - Database connection details
 - JWT secret key
 - Admin credentials
@@ -119,11 +130,13 @@ See `.env.example` for required variables:
 ## Deployment
 
 ### Frontend
+
 - **Vercel** (Recommended): Connect GitHub repo, auto-deploys on push
 - **Netlify**: Similar to Vercel
 - **Any Static Host**: Deploy `frontend/dist/` folder
 
 ### Backend
+
 - **Railway.app**: Free tier with PostgreSQL included
 - **Render.com**: Free tier available
 - **DigitalOcean/AWS**: More advanced options

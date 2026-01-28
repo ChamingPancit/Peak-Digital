@@ -16,7 +16,7 @@ export default function Navbar({ scrolled }) {
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-content">
-        <div className="nav-brand">&lt;Dev/&gt;</div>
+        <div className="nav-brand">Peak Digital</div>
         <ul className={`nav-menu ${mobileMenuOpen ? "active" : ""}`}>
           <li>
             <a
