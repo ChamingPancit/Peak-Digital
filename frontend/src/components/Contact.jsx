@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+const API_BASE_URL =
+  import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -7,6 +10,9 @@ export default function Contact() {
     budget: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,9 +22,37 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setLoading(true);
+    setError("");
+    setSuccess(false);
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const result = await response.json();
+        throw new Error(result.error || "Failed to send message");
+      }
+
+      setSuccess(true);
+      setFormData({
+        name: "",
+        email: "",
+        budget: "",
+        message: "",
+      });
+      setTimeout(() => setSuccess(false), 5000);
+    } catch (err) {
+      setError(err.message || "Connection error");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -87,9 +121,20 @@ export default function Contact() {
             type="submit"
             className="btn btn-primary"
             style={{ width: "100%" }}
+            disabled={loading}
           >
-            Send Message
+            {loading ? "Sending..." : "Send Message"}
           </button>
+          {success && (
+            <div style={{ color: "green", marginTop: "10px", textAlign: "center" }}>
+              ✓ Message sent successfully!
+            </div>
+          )}
+          {error && (
+            <div style={{ color: "red", marginTop: "10px", textAlign: "center" }}>
+              ✗ {error}
+            </div>
+          )}
         </form>
       </div>
     </section>
