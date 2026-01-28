@@ -80,7 +80,8 @@ export default function Services() {
         <div className="section-header">
           <h2 className="section-title">Services Offered</h2>
           <p className="section-subtitle">
-            AI automation and web development solutions to transform your business
+            AI automation and web development solutions to transform your
+            business
           </p>
         </div>
         <div className="services-grid">

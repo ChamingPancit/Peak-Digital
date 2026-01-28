@@ -18,8 +18,9 @@ export default function Hero() {
             AI Automation Solutions & Full-Stack Web Development
           </p>
           <p className="hero-description">
-            Harness the power of artificial intelligence and modern web technologies
-            to streamline operations, increase efficiency, and drive growth.
+            Harness the power of artificial intelligence and modern web
+            technologies to streamline operations, increase efficiency, and
+            drive growth.
           </p>
           <div className="hero-buttons">
             <button onClick={scrollToContact} className="btn btn-primary">

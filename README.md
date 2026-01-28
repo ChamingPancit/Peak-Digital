@@ -90,7 +90,7 @@ The frontend runs on `http://localhost:3000` and backend on `http://localhost:50
 
 - **Hero Section:** Animated gradient showcasing AI + Web Dev solutions
 - **About Section:** AI automation and web development expertise
-- **Services Showcase:** 
+- **Services Showcase:**
   - AI Automation Solutions
   - Custom Web Development
   - Backend & API Development
@@ -174,4 +174,3 @@ Built by Carl Virtusio
 - 🌐 **Live Site:** https://peak-digital.vercel.app
 - 📧 **Contact:** Start your AI automation project today
 - 💻 **Services:** Custom web dev, AI automation, and more
-

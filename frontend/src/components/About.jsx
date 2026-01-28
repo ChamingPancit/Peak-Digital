@@ -10,9 +10,9 @@ export default function About() {
         <div style={{ textAlign: "center", marginBottom: "3rem" }}>
           <h3>AI Automation & Web Development Services</h3>
           <p>
-            Combining artificial intelligence and modern web technologies to transform
-            your business. We build intelligent systems that work smarter, faster, and
-            more efficiently.
+            Combining artificial intelligence and modern web technologies to
+            transform your business. We build intelligent systems that work
+            smarter, faster, and more efficiently.
           </p>
         </div>
 
