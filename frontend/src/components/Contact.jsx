@@ -36,9 +36,15 @@ export default function Contact() {
         body: JSON.stringify(formData),
       });
 
+      const result = await response.json();
+
       if (!response.ok) {
-        const result = await response.json();
-        throw new Error(result.error || "Failed to send message");
+        // Handle validation errors
+        if (result.errors && Array.isArray(result.errors)) {
+          const errorMessages = result.errors.map((err) => err.msg).join(", ");
+          throw new Error(errorMessages);
+        }
+        throw new Error(result.message || result.error || "Failed to send message");
       }
 
       setSuccess(true);
