@@ -203,7 +203,10 @@ export default function AdminDashboard() {
           <nav className="sidebar-nav">
             <div
               className={`nav-item ${activeSection === "overview" ? "active" : ""}`}
-              onClick={() => setActiveSection("overview")}
+              onClick={() => {
+                setActiveSection("overview");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
               style={{ cursor: "pointer" }}
             >
               <span className="nav-icon">📊</span>
@@ -211,7 +214,10 @@ export default function AdminDashboard() {
             </div>
             <div
               className={`nav-item ${activeSection === "messages" ? "active" : ""}`}
-              onClick={() => setActiveSection("messages")}
+              onClick={() => {
+                setActiveSection("messages");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
               style={{ cursor: "pointer" }}
             >
               <span className="nav-icon">📧</span>
@@ -220,7 +226,10 @@ export default function AdminDashboard() {
             </div>
             <div
               className={`nav-item ${activeSection === "settings" ? "active" : ""}`}
-              onClick={() => setActiveSection("settings")}
+              onClick={() => {
+                setActiveSection("settings");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
               style={{ cursor: "pointer" }}
             >
               <span className="nav-icon">⚙️</span>
