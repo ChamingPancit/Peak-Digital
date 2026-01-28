@@ -1,75 +1,75 @@
 export default function Services() {
   const services = [
     {
-      icon: "🎨",
-      title: "Frontend Development",
+      icon: "🤖",
+      title: "AI Automation Solutions",
       description:
-        "Creating responsive, intuitive user interfaces using React, Next.js, and modern CSS frameworks.",
+        "Implement intelligent automation using machine learning and AI to streamline workflows and reduce manual tasks.",
+      features: [
+        "Process automation with AI",
+        "Data analysis & insights",
+        "Chatbots & virtual assistants",
+        "Workflow optimization",
+      ],
+    },
+    {
+      icon: "🎨",
+      title: "Custom Web Development",
+      description:
+        "Creating responsive, intuitive web applications using React, Next.js, and modern technologies.",
       features: [
         "React & Next.js applications",
         "Responsive design & mobile-first",
         "Performance optimization",
-        "Accessibility (A11y)",
+        "SEO optimization",
       ],
     },
     {
       icon: "⚙️",
-      title: "Backend Development",
+      title: "Backend & API Development",
       description:
-        "Building robust, scalable server-side solutions with Node.js, Express, and databases.",
+        "Building robust, scalable server-side solutions with Node.js, Express, and cloud databases.",
       features: [
         "REST & GraphQL APIs",
         "Database design & optimization",
         "Authentication & security",
-        "Cloud deployment",
+        "Microservices architecture",
       ],
     },
     {
-      icon: "🗄️",
-      title: "Database Design",
+      icon: "🧠",
+      title: "Machine Learning Integration",
       description:
-        "Designing efficient, normalized database schemas with PostgreSQL and MongoDB.",
+        "Integrate ML models into your applications for predictive analytics and intelligent decision-making.",
       features: [
-        "Schema optimization",
-        "Data modeling",
-        "Query optimization",
-        "Backup & recovery",
+        "Model integration & deployment",
+        "Predictive analytics",
+        "Computer vision solutions",
+        "NLP implementations",
       ],
     },
     {
       icon: "🚀",
-      title: "DevOps & Deployment",
+      title: "Cloud Deployment & DevOps",
       description:
-        "Managing deployments, CI/CD pipelines, and cloud infrastructure for seamless scaling.",
+        "Deploy applications with CI/CD pipelines and manage cloud infrastructure for scalability.",
       features: [
-        "Docker & Kubernetes",
-        "GitHub Actions CI/CD",
-        "AWS deployment",
+        "AWS & cloud deployment",
+        "GitHub Actions automation",
+        "Docker & containerization",
         "Monitoring & logging",
       ],
     },
     {
       icon: "🔒",
-      title: "Security & Compliance",
+      title: "Security & Data Protection",
       description:
-        "Implementing security best practices and ensuring compliance with industry standards.",
+        "Ensure your data and applications are secure with industry-standard security practices.",
       features: [
-        "OWASP top 10 prevention",
+        "OWASP security standards",
         "Data encryption",
-        "Penetration testing",
+        "Access control & authentication",
         "Compliance audits",
-      ],
-    },
-    {
-      icon: "📊",
-      title: "Consulting & Strategy",
-      description:
-        "Strategic guidance on technology choices, architecture, and best practices.",
-      features: [
-        "Tech stack selection",
-        "Architecture planning",
-        "Performance audits",
-        "Team mentoring",
       ],
     },
   ];
@@ -80,7 +80,7 @@ export default function Services() {
         <div className="section-header">
           <h2 className="section-title">Services Offered</h2>
           <p className="section-subtitle">
-            Comprehensive web development solutions tailored to your needs
+            AI automation and web development solutions to transform your business
           </p>
         </div>
         <div className="services-grid">

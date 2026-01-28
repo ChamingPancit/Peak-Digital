@@ -2,15 +2,17 @@ export default function About() {
   return (
     <section id="about" className="section about">
       <div className="container">
-        <h2 className="section-title">About Me</h2>
+        <h2 className="section-title">About Our Services</h2>
         <p className="section-subtitle">
-          Passionate about crafting exceptional digital experiences
+          Expert in AI automation and web development solutions
         </p>
 
         <div style={{ textAlign: "center", marginBottom: "3rem" }}>
-          <h3>Hi, I'm a Full-Stack Web Developer</h3>
+          <h3>AI Automation & Web Development Services</h3>
           <p>
-            With over 5 years of experience building modern web applications
+            Combining artificial intelligence and modern web technologies to transform
+            your business. We build intelligent systems that work smarter, faster, and
+            more efficiently.
           </p>
         </div>
 

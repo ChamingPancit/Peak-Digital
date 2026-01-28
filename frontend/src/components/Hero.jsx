@@ -13,13 +13,13 @@ export default function Hero() {
     <section id="home" className="hero">
       <div className="hero-container">
         <div className="hero-content">
-          <h1>Building Scalable Web Solutions That Drive Growth</h1>
+          <h1>Automate Your Business with AI & Web Development</h1>
           <p className="hero-tagline">
-            Full-Stack Developer specializing in Node.js, React & PostgreSQL
+            AI Automation Solutions & Full-Stack Web Development
           </p>
           <p className="hero-description">
-            Transforming ideas into powerful, enterprise-grade applications that
-            scale with your business.
+            Harness the power of artificial intelligence and modern web technologies
+            to streamline operations, increase efficiency, and drive growth.
           </p>
           <div className="hero-buttons">
             <button onClick={scrollToContact} className="btn btn-primary">
