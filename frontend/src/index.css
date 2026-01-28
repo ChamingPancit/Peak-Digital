@@ -914,7 +914,7 @@ section {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(-45deg, #d946ef, #a855f7, #ec4899, #d946ef);
+  background: linear-gradient(-45deg, #a01f9a, #6d28d9, #be185d, #a01f9a);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
   padding: 1rem;
