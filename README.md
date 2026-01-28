@@ -1,6 +1,6 @@
-# Portfolio Website
+# Peak Digital - AI Automation & Web Development
 
-A full-stack developer portfolio built with React + Vite (frontend) and Node.js + Express (backend), featuring an admin dashboard for managing contact messages.
+A full-stack business website showcasing AI automation and web development services. Built with React + Vite (frontend) and Node.js + Express (backend), featuring an admin dashboard for managing client inquiries and service requests.
 
 ## Tech Stack
 
@@ -20,9 +20,10 @@ A full-stack developer portfolio built with React + Vite (frontend) and Node.js 
 
 **Design:**
 
-- Dark Purple Theme (#0f0a1a)
-- Magenta Accents (#d946ef)
+- Dark Purple Theme (#0f0a1a) - Modern & Professional
+- Magenta Accents (#d946ef) - Brand Highlight
 - Fully Responsive (Mobile, Tablet, Desktop)
+- AI-focused messaging and service positioning
 
 ## Project Structure
 
@@ -87,20 +88,26 @@ The frontend runs on `http://localhost:3000` and backend on `http://localhost:50
 
 ### Public Site
 
-- Hero section with animated gradient
-- About section
-- Services showcase
-- Portfolio projects
-- Contact form with budget range selection
-- Fully responsive design
+- **Hero Section:** Animated gradient showcasing AI + Web Dev solutions
+- **About Section:** AI automation and web development expertise
+- **Services Showcase:** 
+  - AI Automation Solutions
+  - Custom Web Development
+  - Backend & API Development
+  - Machine Learning Integration
+  - Cloud Deployment & DevOps
+  - Security & Data Protection
+- **Contact Form:** Service inquiry collection with budget range
+- **Fully Responsive:** Mobile, tablet, and desktop optimization
+- **Dark Theme:** Modern purple/magenta design
 
 ### Admin Dashboard
 
 - Secure login with JWT authentication
-- Message management (view, filter, delete)
-- Message statistics
-- Admin settings
-- Real-time message count
+- Client inquiry management (view, filter, mark as read)
+- Service request tracking with statistics
+- Real-time message dashboard
+- Admin settings and team management
 
 ## Admin Credentials (Development)
 
@@ -111,12 +118,12 @@ The frontend runs on `http://localhost:3000` and backend on `http://localhost:50
 
 ## Database
 
-The application uses PostgreSQL. Migrations are run automatically on startup.
+The application uses PostgreSQL to store client inquiries and manage admin users. Migrations are run automatically on startup.
 
 **Tables:**
 
-- `contact_messages` - Contact form submissions
-- `admin_users` - Admin user accounts
+- `contact_messages` - Service inquiries and requests from clients
+- `admin_users` - Admin user accounts for dashboard access
 
 ## Environment Variables
 
@@ -157,4 +164,14 @@ MIT
 
 ## Author
 
-Carl Virtusio
+**Peak Digital** - AI Automation & Web Development Services  
+Built by Carl Virtusio
+
+---
+
+## Quick Links
+
+- 🌐 **Live Site:** https://peak-digital.vercel.app
+- 📧 **Contact:** Start your AI automation project today
+- 💻 **Services:** Custom web dev, AI automation, and more
+
